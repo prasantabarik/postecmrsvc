@@ -7,20 +7,18 @@ import com.tcs.service.model.ECMR
 import khttp.*
 
 object Utility {
-    fun convert(url: String, objectType: Any, params: MutableMap<String, String>): List<ECMR>? {
+    fun convert(url: String, objectType: Any): MutableList<ECMR>? {
 
-        val jsonObject = get(url = url, params = params).jsonObject
+        val jsonObject = get(url = url).jsonObject
         println(jsonObject)
         return when(true) {
             true -> {
                 println("Hi")
                 val mapper = ObjectMapper().registerKotlinModule()
                 mapper.enable(DeserializationFeature.ACCEPT_EMPTY_STRING_AS_NULL_OBJECT)
-                println(objectType)
+
                 when (objectType) {
                     is ECMR -> {
-                        print(mapper)
-
                         mapper.readValue(jsonObject["response"].toString(), Array<ECMR>::class.java).toMutableList()
                     }
                     else -> {

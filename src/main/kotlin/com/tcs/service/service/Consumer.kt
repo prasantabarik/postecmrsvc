@@ -11,13 +11,15 @@ import io.eventuate.tram.events.subscriber.DomainEventHandlers
 import io.eventuate.tram.events.subscriber.DomainEventHandlersBuilder
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
-import javax.rmi.CORBA.Util
 
 @Service
 class Consumer {
 
     @Autowired
     lateinit var producer: Producer
+
+    @Autowired
+    lateinit var updateStatusFlag: UpdateStatusFlag
 
     fun domainEventHandlers(): DomainEventHandlers {
 
@@ -26,10 +28,12 @@ class Consumer {
                 .onEvent(PostEcmrEvent::class.java) { dee: DomainEventEnvelope<PostEcmrEvent> -> run {
                     val post: PostEcmrEvent = dee.event
                     println(post.ShipmentId)
-//                    println(post)
+                    val result = Utility.convert(BASE_URI + post.ShipmentId, ECMR())
+                    updateStatusFlag.changeFlag(result)
 
-//                    Utility.convert(BASE_URI, ECMR(), mutableMapOf())
-                    producer.create(ECMRPosted(post.ShipmentId))}
+                    producer.create(ECMRPosted(post.ShipmentId))
+
+                }
 
                 }.build()
     }

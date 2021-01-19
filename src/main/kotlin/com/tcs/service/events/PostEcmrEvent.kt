@@ -6,7 +6,6 @@ import org.springframework.data.domain.DomainEvents
 class PostEcmrEvent : DomainEvent {
 
     var ShipmentId:String = ""
-//    var MessageNo:String = ""
 
     constructor() {}
     constructor(message: String) {

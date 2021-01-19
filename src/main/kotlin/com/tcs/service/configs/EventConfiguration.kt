@@ -9,6 +9,7 @@ import io.eventuate.tram.spring.events.subscriber.TramEventSubscriberConfigurati
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.context.annotation.Import
+import org.springframework.web.client.RestTemplate
 
 
 @Configuration
@@ -23,6 +24,11 @@ class EventConfiguration {
 
     @Bean
     fun domainEventDispatcher(consumer: Consumer, domainEventDispatcherFactory: DomainEventDispatcherFactory): DomainEventDispatcher? {
-        return domainEventDispatcherFactory.make("EventPreECMR", consumer.domainEventHandlers())
+        return domainEventDispatcherFactory.make("ECMRPostedConsumer", consumer.domainEventHandlers())
+    }
+
+    @Bean
+    fun restTemplate(): RestTemplate{
+        return RestTemplate()
     }
 }

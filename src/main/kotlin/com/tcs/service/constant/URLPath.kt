@@ -2,21 +2,12 @@ package com.tcs.service.constant
 
 object URLPath {
 
-    const val GET_ALL_URI = "/model"
-    const val GET_BY_ID_URI = "/model/{id}"
-    const val POST_PUT_DELETE_URI = "/model"
-    const val SAMPLE_DATA_JSON_PATH = "./src/test/resources/contracts/jsons/sample.json"
-    const val DUMMY_DATA_COLLECTION = "./src/test/resources/contracts/jsons/entity.json"
-//    const val BASE_URI = "/api/v1/deliveryMoment-Crud-service"
-    const val BASE_URI = "https://weeus01devapim01.azure-api.net/tct/api/simacan"
-    const val SAMPLE_RESPONSE_JSON_PATH = "./src/test/resources/contracts/jsons/modelresponse.json"
-    const val SAMPLE_CONTRACT_JSON_PATH = "./src/test/resources/contracts/jsons/contract-sample-data.json"
-    const val GET_RESPONSE_JSON_PATH = "./src/test/resources/contracts/jsons/getDeliveryMoment.json"
-    const val POST_RESPONSE_JSON_PATH = "./src/test/resources/contracts/jsons/postDeliveryMoment.json"
-    const val PUT_RESPONSE_JSON_PATH = "./src/test/resources/contracts/jsons/putDeliveryMoment.json"
-    const val DEL_RESPONSE_JSON_PATH = "./src/test/resources/contracts/jsons/delDeliveryMoment.json"
-    const val ENTITY_RESPONSE_JSON_PATH = "./src/test/resources/contracts/jsons/postJsonEntity.json"
-
-
+    const val PUT_URI = "http://preparescmrsvc.59ae6b648ca3437aae3a.westeurope.aksapp.io/api/model"
+    const val BASE_URI = "http://preparescmrsvc.59ae6b648ca3437aae3a.westeurope.aksapp.io/api/getdata/"
+//    const val PUT_URI = "http://localhost:8080/api/model"
+//    const val BASE_URI = "http://localhost:8080/api/getdata/"
+    const val API_AUTH_URI = "https://weeus01devapim01.azure-api.net/tct/api/sec/simacan/"
+    const val API_URI = "https://weeus01devapim01.azure-api.net/tct/api/simacan"
+    const val AUTH_URI = "https://login.microsoftonline.com/3c8ea0e4-127c-4a02-ac65-58830e4ac608/oauth2/v2.0/token"
 
 }
