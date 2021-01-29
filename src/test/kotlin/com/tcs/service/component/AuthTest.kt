@@ -1,10 +1,13 @@
 package com.tcs.service.component
 
+import com.tcs.service.constant.URLPath
+import com.tcs.service.constant.URLPath.BASE_URI
 import com.tcs.service.events.ECMRPostedEvent
 import com.tcs.service.events.PostEcmrEvent
 import com.tcs.service.model.*
 import com.tcs.service.service.Auth
 import com.tcs.service.service.UpdateStatusFlag
+import com.tcs.service.utility.Utility
 import org.junit.Assert
 import org.junit.Test
 import org.springframework.web.client.RestTemplate
@@ -18,6 +21,10 @@ var restTemplate: RestTemplate = RestTemplate()
     var auth: Auth = Auth(restTemplate)
 
     var updateStatus: UpdateStatusFlag= UpdateStatusFlag(restTemplate,auth)
+
+    var utility : Utility = Utility
+
+
 
     @Test
     fun prepareAuthTest() {
@@ -44,5 +51,12 @@ var restTemplate: RestTemplate = RestTemplate()
     fun testFlag() {
        var ecmr: MutableList<ECMR> = mutableListOf()
         updateStatus.changeFlag(ecmr)
+    }
+
+    @Test
+    fun utils() {
+      var result=  utility.convert(BASE_URI + "10123", ECMR())
+
+        Assert.assertTrue(result.isNullOrEmpty())
     }
 }
