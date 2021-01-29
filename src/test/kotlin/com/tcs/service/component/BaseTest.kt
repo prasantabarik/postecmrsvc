@@ -60,15 +60,15 @@ open class BaseTest {
     public val ext_expires_in: String = ""
     public val access_token: String = ""
 
-    public val model1: ECMR = ECMR()
-    public val model2: OrderInShipment = OrderInShipment()
-    public val model3: ShipUnit = ShipUnit()
-    public val model4: ContainerInShipItems = ContainerInShipItems()
-    public val model5: AuthCode = AuthCode()
-    public val model6: ECMRPosted = ECMRPosted()
-    public val model7: ECMRPostedEvent = ECMRPostedEvent()
-    public val model8: PostECMR = PostECMR()
-    public val model9: PostEcmrEvent = PostEcmrEvent()
+   public val model:ECMR = ECMR()
+//    public val model2: OrderInShipment = OrderInShipment()
+//    public val model3: ShipUnit = ShipUnit()
+//    public val model4: ContainerInShipItems = ContainerInShipItems()
+//    public val model5: AuthCode = AuthCode()
+//    public val model6: ECMRPosted = ECMRPosted()
+//    public val model7: ECMRPostedEvent = ECMRPostedEvent()
+//    public val model8: PostECMR = PostECMR()
+//    public val model9: PostEcmrEvent = PostEcmrEvent()
 
 
 
