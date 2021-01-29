@@ -37,6 +37,15 @@ open class BaseTest {
     public val statusFlag: String = "Not Created"
     public val orderInShipment: MutableList<OrderInShipment>? = mutableListOf()
 
+    public val model1: ECMR = ECMR()
+    public val model2: OrderInShipment = OrderInShipment()
+    public val model3: ShipUnit = ShipUnit()
+    public val model4: ContainerInShipItems = ContainerInShipItems()
+    public val model5 : PostEcmrEvent = PostEcmrEvent()
+
+
+    public val model8 : PostECMR = PostECMR("message")
+
     public val referenceNumberPointOfDeparture: String = ""
     public val shipUnit: MutableList<ShipUnit>? = mutableListOf()
 
@@ -54,19 +63,12 @@ open class BaseTest {
     public val response: Any? = ""
 
     public val shipment_id: String = ""
-
-    public val token_type: String = ""
-    public val expires_in: String = ""
-    public val ext_expires_in: String = ""
-    public val access_token: String = ""
-
-   public val model:ECMR = ECMR()
 //    public val model2: OrderInShipment = OrderInShipment()
 //    public val model3: ShipUnit = ShipUnit()
 //    public val model4: ContainerInShipItems = ContainerInShipItems()
-//    public val model5: AuthCode = AuthCode()
-//    public val model6: ECMRPosted = ECMRPosted()
-//    public val model7: ECMRPostedEvent = ECMRPostedEvent()
+   public val model9: AuthCode = AuthCode()
+    public val model6: ECMRPosted = ECMRPosted()
+    public val model7: ECMRPostedEvent = ECMRPostedEvent()
 //    public val model8: PostECMR = PostECMR()
 //    public val model9: PostEcmrEvent = PostEcmrEvent()
 
