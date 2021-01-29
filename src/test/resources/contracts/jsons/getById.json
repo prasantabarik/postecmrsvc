@@ -1,0 +1,21 @@
+{
+  "responseCode": "200",
+  "responseDescription": "SUCCESS",
+  "response": [
+    {
+      "departureId": "106175",
+      "glnshipfrom": "9710400000327",
+      "glnshipto": "9710400010418",
+      "referencenumberoftrip": "Route 220",
+      "finishedloadingdatetime": "2021-01-10T16:29:43.000+00:00",
+      "containertypegtinprimarycontai": "9716532013105",
+      "shipunitsscc": "987104003610147490",
+      "refnumberpointofdestination": "95385307",
+      "totalloadweight": 188,
+      "uomweight": "kg",
+      "numberofprimarycontainers": 1,
+      "containertypegtin": "9716532013105",
+      "numberofcontainers": 1
+    }
+  ]
+}
