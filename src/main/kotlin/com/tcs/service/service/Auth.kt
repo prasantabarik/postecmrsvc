@@ -40,7 +40,7 @@ class Auth(private val restTemplate: RestTemplate) {
 
         logger.info("After")
 
-        println(response.body?.access_token)
+        //println(response.body?.access_token)
 
         return response.body?.access_token
     }
